@@ -12,7 +12,7 @@ config CRYPTO_DEV_NX_ENCRYPT
 	  will be called nx_crypto.
 
 config CRYPTO_DEV_NX_COMPRESS
-	tristate "Compression acceleration support"
+	bool "Compression acceleration support"
 	default y
 	select CRYPTO_ALGAPI
 	select 842_DECOMPRESS
@@ -36,7 +36,7 @@ config CRYPTO_DEV_NX_COMPRESS_PSERIES
 	  If you choose 'M' here, this module will be called nx_compress_pseries.
 
 config CRYPTO_DEV_NX_842_COMPRESS_POWERNV
-	tristate "842 Compression acceleration support on PowerNV platform"
+	bool "842 Compression acceleration support on PowerNV platform"
 	depends on PPC_POWERNV
 	depends on PPC_VAS
 	default y
@@ -47,7 +47,7 @@ config CRYPTO_DEV_NX_842_COMPRESS_POWERNV
 	  If you choose 'M' here, this module will be called nx_compress_powernv.
 
 config CRYPTO_DEV_NX_GZIP_COMPRESS_POWERNV
-	tristate "Compression acceleration support on PowerNV platform"
+	bool "Compression acceleration support on PowerNV platform"
 	depends on PPC_POWERNV
 	depends on PPC_VAS
 	default y
